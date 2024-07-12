@@ -3,6 +3,13 @@ on:
   pull_request:
     types: [opened, edited]
   workflow_dispatch:
+  push:
+    branches:
+      - main #main
+      - 'dev-*' #dev-new dev-newww dev-oppo
+      - 'feat/**' #feat/er feat/erc/ert
+    paths-ignore:
+      -'.github/worklows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
